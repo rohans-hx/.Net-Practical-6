@@ -1,0 +1,24 @@
+﻿@model Practical_6.Models.Product
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+</head>
+<body>
+    <h2>Product Details</h2>
+    <br />
+    <p>Product ID: @Model.ProductID</p>
+    <img src="@Model.ImageUrl" alt="@Model.ProductName" width="150" height="150" />
+    <br />
+    <p>Name:@Model.ProductName</p>
+    <p>Category:@Model.ProductCategory</p>
+    <p>Price:@Model.ProductPrice</p>
+    <p>Quantity:@Model.ProductQuantity</p>
+</body>
+</html>

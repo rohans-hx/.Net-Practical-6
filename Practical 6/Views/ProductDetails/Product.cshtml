@@ -1,0 +1,39 @@
+﻿@model List<Practical_6.Models.Product>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Products</title>
+</head>
+<body>
+    <h2>Product Catalog Page</h2>
+    <table>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Category</th>
+            <th>Product Price</th>
+            <th>Product Quantity</th>
+            <th>Product Description</th>
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.ProductName</td>
+                <td>@i.ProductCategory</td>
+                <td>@i.ProductPrice</td>
+                <td>@i.ProductQuantity</td>
+                <td>
+                    @Html.ActionLink("View Details", "Details", "ProductDetails", new { id = i.ProductID }, null)
+                </td>
+            </tr>
+        }
+
+
+    </table>
+</body>
+</html>
